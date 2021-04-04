@@ -1,32 +1,43 @@
 package com.silenteight.homework.controller;
 
-import com.silenteight.homework.model.AlgorithmType;
-import com.silenteight.homework.model.NameToCheck;
-import com.silenteight.homework.service.AllPhrasesService;
-import com.silenteight.homework.service.FirstPhraseService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
-import java.io.FileNotFoundException;
+import com.silenteight.homework.service.DisplayerOfNamesService;
+import com.silenteight.homework.service.GenderDetectorByAllPhrasesService;
+import com.silenteight.homework.service.GenderDetectorByFirstPhraseService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AppController {
 
-    AllPhrasesService allPhrasesService;
-    FirstPhraseService firstPhraseService;
+    GenderDetectorByAllPhrasesService genderDetectorByAllPhrasesService;
+    GenderDetectorByFirstPhraseService genderDetectorByFirstPhraseService;
+    DisplayerOfNamesService displayerOfNamesService;
 
-    public AppController(AllPhrasesService allPhrasesService, FirstPhraseService firstPhraseService) {
-        this.allPhrasesService = allPhrasesService;
-        this.firstPhraseService = firstPhraseService;
+    public AppController(GenderDetectorByAllPhrasesService genderDetectorByAllPhrasesService,
+                         GenderDetectorByFirstPhraseService genderDetectorByFirstPhraseService,
+                         DisplayerOfNamesService displayerOfNamesService) {
+        this.genderDetectorByAllPhrasesService = genderDetectorByAllPhrasesService;
+        this.genderDetectorByFirstPhraseService = genderDetectorByFirstPhraseService;
+        this.displayerOfNamesService = displayerOfNamesService;
     }
 
-    @PostMapping("/checker")
-    public void sendNameToCheck(@RequestBody NameToCheck nameToCheck) throws FileNotFoundException {
-        if (nameToCheck.getAlgorithmType().equals(AlgorithmType.FIRST_WORD)) {
-            firstPhraseService.getGender(nameToCheck);
-        } else if (nameToCheck.getAlgorithmType().equals(AlgorithmType.ALL)) {
-            allPhrasesService.getGender(nameToCheck);
-        }
+//    @PostMapping("/checker")
+////    public void sendNameToCheck(@RequestBody NameToCheck nameToCheck) throws FileNotFoundException {
+////        if (nameToCheck.getAlgorithmType().equals(AlgorithmType.FIRST_WORD)) {
+////            genderDetectorByFirstPhraseService.getGender(nameToCheck);
+////        } else if (nameToCheck.getAlgorithmType().equals(AlgorithmType.ALL)) {
+////            genderDetectorByAllPhrasesService.getGender(nameToCheck);
+////        }
+////    }
+
+    @GetMapping("allnames/male")
+    public String showAllMaleNames(){
+        return displayerOfNamesService.showAllMaleNames();
+    }
+
+    @GetMapping("allnames/female")
+    public String showAllFemaleNames(){
+        return displayerOfNamesService.showAllFemaleNames();
     }
 }
