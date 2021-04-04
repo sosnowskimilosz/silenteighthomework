@@ -15,11 +15,11 @@ public class DisplayerOfNamesService {
         this.namesFromFilesRepository = namesFromFilesRepository;
     }
 
-    public String showAllMaleNames(){
+    public String getAllMaleNames(){
         return namesFromFilesRepository.getAllMaleNames();
     }
 
-    public String showAllFemaleNames(){
+    public String getAllFemaleNames(){
         return namesFromFilesRepository.getAllFemaleNames();
     }
 }

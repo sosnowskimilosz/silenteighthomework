@@ -1,12 +1,9 @@
 package com.silenteight.homework.controller;
 
 
-import com.silenteight.homework.model.AlgorithmType;
 import com.silenteight.homework.model.Gender;
 import com.silenteight.homework.model.NameToCheck;
 import com.silenteight.homework.service.DisplayerOfNamesService;
-import com.silenteight.homework.service.GenderDetectorByAllPhrasesService;
-import com.silenteight.homework.service.GenderDetectorByFirstPhraseService;
 import com.silenteight.homework.service.SelectorOfRightVariantService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,11 +28,11 @@ public class AppController {
 
     @GetMapping("allnames/male")
     public String showAllMaleNames() {
-        return displayerOfNamesService.showAllMaleNames();
+        return displayerOfNamesService.getAllMaleNames();
     }
 
     @GetMapping("allnames/female")
     public String showAllFemaleNames() {
-        return displayerOfNamesService.showAllFemaleNames();
+        return displayerOfNamesService.getAllFemaleNames();
     }
 }

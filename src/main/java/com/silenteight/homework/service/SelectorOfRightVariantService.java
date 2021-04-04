@@ -20,7 +20,7 @@ public class SelectorOfRightVariantService {
     }
 
     public Gender detectGender(NameToCheck nameToCheck) {
-        if (AlgorithmType.FIRST_WORD.equals(nameToCheck.getAlgorithmType())) {
+        if (AlgorithmType.FIRST_NAME.equals(nameToCheck.getAlgorithmType())) {
             return genderDetectorByFirstPhraseService.getGender(nameToCheck.getName());
         }if (AlgorithmType.ALL.equals(nameToCheck.getAlgorithmType())) {
             return genderDetectorByAllPhrasesService.getGender(nameToCheck.getName());
