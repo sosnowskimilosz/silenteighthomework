@@ -1,0 +1,16 @@
+com/silenteight/homework/HomeworkApplication.java
+ com.silenteight.homework.HomeworkApplication
+com/silenteight/homework/model/Gender.java
+ com.silenteight.homework.model.Gender
+com/silenteight/homework/model/NameToCheck.java
+ com.silenteight.homework.model.NameToCheck
+com/silenteight/homework/model/AlgorithmType.java
+ com.silenteight.homework.model.AlgorithmType
+com/silenteight/homework/service/FinderOfTokens.java
+ com.silenteight.homework.service.FinderOfTokens
+com/silenteight/homework/service/AllPhrasesService.java
+ com.silenteight.homework.service.AllPhrasesService
+com/silenteight/homework/controller/AppController.java
+ com.silenteight.homework.controller.AppController
+com/silenteight/homework/service/FirstPhraseService.java
+ com.silenteight.homework.service.FirstPhraseService
