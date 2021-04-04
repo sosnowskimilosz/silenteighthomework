@@ -16,7 +16,8 @@ public class AppController {
     SelectorOfRightVariantService selectorOfRightVariantService;
     DisplayerOfNamesService displayerOfNamesService;
 
-    public AppController(SelectorOfRightVariantService selectorOfRightVariantService, DisplayerOfNamesService displayerOfNamesService) {
+    public AppController(SelectorOfRightVariantService selectorOfRightVariantService,
+                         DisplayerOfNamesService displayerOfNamesService) {
         this.selectorOfRightVariantService = selectorOfRightVariantService;
         this.displayerOfNamesService = displayerOfNamesService;
     }

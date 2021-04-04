@@ -6,24 +6,23 @@ import com.silenteight.homework.model.Gender;
 import com.silenteight.homework.model.NameToCheck;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class SelectorOfRightVariantService {
 
-    GenderDetectorByAllPhrasesService genderDetectorByAllPhrasesService;
-    GenderDetectorByFirstPhraseService genderDetectorByFirstPhraseService;
+    GenderDetectorByAllNamesService genderDetectorByAllNamesService;
+    GenderDetectorByFirstNameService genderDetectorByFirstNameService;
 
-    public SelectorOfRightVariantService(GenderDetectorByAllPhrasesService genderDetectorByAllPhrasesService,
-                                         GenderDetectorByFirstPhraseService genderDetectorByFirstPhraseService) {
-        this.genderDetectorByAllPhrasesService = genderDetectorByAllPhrasesService;
-        this.genderDetectorByFirstPhraseService = genderDetectorByFirstPhraseService;
+    public SelectorOfRightVariantService(GenderDetectorByAllNamesService genderDetectorByAllNamesService,
+                                         GenderDetectorByFirstNameService genderDetectorByFirstNameService) {
+        this.genderDetectorByAllNamesService = genderDetectorByAllNamesService;
+        this.genderDetectorByFirstNameService = genderDetectorByFirstNameService;
     }
 
     public Gender detectGender(NameToCheck nameToCheck) {
         if (AlgorithmType.FIRST_NAME.equals(nameToCheck.getAlgorithmType())) {
-            return genderDetectorByFirstPhraseService.getGender(nameToCheck.getName());
+            return genderDetectorByFirstNameService.getGender(nameToCheck.getName());
         }if (AlgorithmType.ALL.equals(nameToCheck.getAlgorithmType())) {
-            return genderDetectorByAllPhrasesService.getGender(nameToCheck.getName());
+            return genderDetectorByAllNamesService.getGender(nameToCheck.getName());
         } else {
             throw new AlgorithmNotFound("Bad type of algorithm");
         }

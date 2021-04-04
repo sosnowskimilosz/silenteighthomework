@@ -1,22 +1,22 @@
 com/silenteight/homework/HomeworkApplication.java
  com.silenteight.homework.HomeworkApplication
-com/silenteight/homework/model/Gender.java
- com.silenteight.homework.model.Gender
-com/silenteight/homework/service/GenderDetectorByAllPhrasesService.java
- com.silenteight.homework.service.GenderDetectorByAllPhrasesService
-com/silenteight/homework/exceptions/AlgorithmNotFound.java
- com.silenteight.homework.exceptions.AlgorithmNotFound
-com/silenteight/homework/service/DisplayerOfNamesService.java
- com.silenteight.homework.service.DisplayerOfNamesService
-com/silenteight/homework/repository/NamesFromFilesRepository.java
- com.silenteight.homework.repository.NamesFromFilesRepository
-com/silenteight/homework/service/GenderDetectorByFirstPhraseService.java
- com.silenteight.homework.service.GenderDetectorByFirstPhraseService
-com/silenteight/homework/controller/AppController.java
- com.silenteight.homework.controller.AppController
 com/silenteight/homework/model/NameToCheck.java
  com.silenteight.homework.model.NameToCheck
+com/silenteight/homework/exceptions/AlgorithmNotFound.java
+ com.silenteight.homework.exceptions.AlgorithmNotFound
 com/silenteight/homework/model/AlgorithmType.java
  com.silenteight.homework.model.AlgorithmType
+com/silenteight/homework/repository/NamesFromFilesRepository.java
+ com.silenteight.homework.repository.NamesFromFilesRepository
+com/silenteight/homework/service/DisplayerOfNamesService.java
+ com.silenteight.homework.service.DisplayerOfNamesService
+com/silenteight/homework/controller/AppController.java
+ com.silenteight.homework.controller.AppController
+com/silenteight/homework/service/GenderDetectorByAllNamesService.java
+ com.silenteight.homework.service.GenderDetectorByAllNamesService
 com/silenteight/homework/service/SelectorOfRightVariantService.java
  com.silenteight.homework.service.SelectorOfRightVariantService
+com/silenteight/homework/service/GenderDetectorByFirstNameService.java
+ com.silenteight.homework.service.GenderDetectorByFirstNameService
+com/silenteight/homework/model/Gender.java
+ com.silenteight.homework.model.Gender
