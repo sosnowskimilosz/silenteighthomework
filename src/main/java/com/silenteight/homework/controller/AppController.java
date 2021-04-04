@@ -1,43 +1,41 @@
 package com.silenteight.homework.controller;
 
 
+import com.silenteight.homework.model.AlgorithmType;
+import com.silenteight.homework.model.Gender;
+import com.silenteight.homework.model.NameToCheck;
 import com.silenteight.homework.service.DisplayerOfNamesService;
 import com.silenteight.homework.service.GenderDetectorByAllPhrasesService;
 import com.silenteight.homework.service.GenderDetectorByFirstPhraseService;
+import com.silenteight.homework.service.SelectorOfRightVariantService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AppController {
 
-    GenderDetectorByAllPhrasesService genderDetectorByAllPhrasesService;
-    GenderDetectorByFirstPhraseService genderDetectorByFirstPhraseService;
+    SelectorOfRightVariantService selectorOfRightVariantService;
     DisplayerOfNamesService displayerOfNamesService;
 
-    public AppController(GenderDetectorByAllPhrasesService genderDetectorByAllPhrasesService,
-                         GenderDetectorByFirstPhraseService genderDetectorByFirstPhraseService,
-                         DisplayerOfNamesService displayerOfNamesService) {
-        this.genderDetectorByAllPhrasesService = genderDetectorByAllPhrasesService;
-        this.genderDetectorByFirstPhraseService = genderDetectorByFirstPhraseService;
+    public AppController(SelectorOfRightVariantService selectorOfRightVariantService, DisplayerOfNamesService displayerOfNamesService) {
+        this.selectorOfRightVariantService = selectorOfRightVariantService;
         this.displayerOfNamesService = displayerOfNamesService;
     }
 
-//    @PostMapping("/checker")
-////    public void sendNameToCheck(@RequestBody NameToCheck nameToCheck) throws FileNotFoundException {
-////        if (nameToCheck.getAlgorithmType().equals(AlgorithmType.FIRST_WORD)) {
-////            genderDetectorByFirstPhraseService.getGender(nameToCheck);
-////        } else if (nameToCheck.getAlgorithmType().equals(AlgorithmType.ALL)) {
-////            genderDetectorByAllPhrasesService.getGender(nameToCheck);
-////        }
-////    }
+    @PostMapping("/checker")
+    public Gender sendNameToCheck(@RequestBody NameToCheck nameToCheck) {
+        return selectorOfRightVariantService.detectGender(nameToCheck);
+    }
 
     @GetMapping("allnames/male")
-    public String showAllMaleNames(){
+    public String showAllMaleNames() {
         return displayerOfNamesService.showAllMaleNames();
     }
 
     @GetMapping("allnames/female")
-    public String showAllFemaleNames(){
+    public String showAllFemaleNames() {
         return displayerOfNamesService.showAllFemaleNames();
     }
 }
