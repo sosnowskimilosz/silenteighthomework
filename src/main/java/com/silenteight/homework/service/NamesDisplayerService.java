@@ -4,11 +4,11 @@ import com.silenteight.homework.repository.NamesFromFilesRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DisplayerOfNamesService {
+public class NamesDisplayerService {
 
     NamesFromFilesRepository namesFromFilesRepository;
 
-    public DisplayerOfNamesService(NamesFromFilesRepository namesFromFilesRepository) {
+    public NamesDisplayerService(NamesFromFilesRepository namesFromFilesRepository) {
         this.namesFromFilesRepository = namesFromFilesRepository;
     }
 

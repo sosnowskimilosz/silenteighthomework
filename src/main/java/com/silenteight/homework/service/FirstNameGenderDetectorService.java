@@ -7,12 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GenderDetectorByFirstNameService {
+public class FirstNameGenderDetectorService {
 
-    Logger log = LoggerFactory.getLogger(GenderDetectorByFirstNameService.class);
+    Logger log = LoggerFactory.getLogger(FirstNameGenderDetectorService.class);
     NamesFromFilesRepository namesFromFilesRepository;
 
-    public GenderDetectorByFirstNameService(NamesFromFilesRepository namesFromFilesRepository) {
+    public FirstNameGenderDetectorService(NamesFromFilesRepository namesFromFilesRepository) {
         this.namesFromFilesRepository = namesFromFilesRepository;
     }
 
@@ -20,7 +20,7 @@ public class GenderDetectorByFirstNameService {
         String firstName=getFirstName(nameToCheck);
         boolean isFemale=namesFromFilesRepository.isNameInFemaleNamesFile(firstName);
         boolean isMale=namesFromFilesRepository.isNameInMaleNamesFile(firstName);
-        log.info("Checking by -> {}, name -> {}", GenderDetectorByFirstNameService.class.getSimpleName(),firstName);
+        log.info("Checking by -> {}, name -> {}", FirstNameGenderDetectorService.class.getSimpleName(),firstName);
         if(isFemale ^ isMale){
             if(isFemale){
                 return Gender.FEMALE;

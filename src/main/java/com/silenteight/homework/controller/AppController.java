@@ -3,8 +3,8 @@ package com.silenteight.homework.controller;
 
 import com.silenteight.homework.model.Gender;
 import com.silenteight.homework.model.NameToCheck;
-import com.silenteight.homework.service.DisplayerOfNamesService;
-import com.silenteight.homework.service.SelectorOfRightVariantService;
+import com.silenteight.homework.service.NamesDisplayerService;
+import com.silenteight.homework.service.VariantSelectorService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,27 +13,27 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppController {
 
-    SelectorOfRightVariantService selectorOfRightVariantService;
-    DisplayerOfNamesService displayerOfNamesService;
+    VariantSelectorService variantSelectorService;
+    NamesDisplayerService namesDisplayerService;
 
-    public AppController(SelectorOfRightVariantService selectorOfRightVariantService,
-                         DisplayerOfNamesService displayerOfNamesService) {
-        this.selectorOfRightVariantService = selectorOfRightVariantService;
-        this.displayerOfNamesService = displayerOfNamesService;
+    public AppController(VariantSelectorService variantSelectorService,
+                         NamesDisplayerService namesDisplayerService) {
+        this.variantSelectorService = variantSelectorService;
+        this.namesDisplayerService = namesDisplayerService;
     }
 
     @PostMapping("/checker")
     public Gender sendNameToCheck(@RequestBody NameToCheck nameToCheck) {
-        return selectorOfRightVariantService.detectGender(nameToCheck);
+        return variantSelectorService.detectGender(nameToCheck);
     }
 
     @GetMapping("allnames/male")
     public String showAllMaleNames() {
-        return displayerOfNamesService.getAllMaleNames();
+        return namesDisplayerService.getAllMaleNames();
     }
 
     @GetMapping("allnames/female")
     public String showAllFemaleNames() {
-        return displayerOfNamesService.getAllFemaleNames();
+        return namesDisplayerService.getAllFemaleNames();
     }
 }
