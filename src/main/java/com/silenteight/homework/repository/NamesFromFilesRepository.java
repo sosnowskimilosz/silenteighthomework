@@ -32,18 +32,18 @@ public class NamesFromFilesRepository {
         return allNames.toString().trim();
     }
 
-    public boolean isNameInFemaleNamesFile(String name){
-        return isNameInFile(fileWithFemaleNames,name);
+    public boolean isNameInFemaleNamesFile(String name) {
+        return isNameInFile(fileWithFemaleNames, name);
     }
 
-    public boolean isNameInMaleNamesFile(String name){
-        return isNameInFile(fileWithMaleNames,name);
+    public boolean isNameInMaleNamesFile(String name) {
+        return isNameInFile(fileWithMaleNames, name);
     }
 
     private boolean isNameInFile(File file, String name) {
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNext()) {
-                if(name.equals(scanner.nextLine().toUpperCase().trim())){
+                if (name.equals(scanner.nextLine().toUpperCase().trim())) {
                     return true;
                 }
             }

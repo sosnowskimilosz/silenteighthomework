@@ -16,24 +16,24 @@ public class FirstNameGenderDetectorService {
         this.namesFromFilesRepository = namesFromFilesRepository;
     }
 
-    public Gender getGender(String nameToCheck){
-        String firstName=getFirstName(nameToCheck);
-        boolean isFemale=namesFromFilesRepository.isNameInFemaleNamesFile(firstName);
-        boolean isMale=namesFromFilesRepository.isNameInMaleNamesFile(firstName);
-        log.info("Checking by -> {}, name -> {}", FirstNameGenderDetectorService.class.getSimpleName(),firstName);
-        if(isFemale ^ isMale){
-            if(isFemale){
+    public Gender getGender(String nameToCheck) {
+        String firstName = getFirstName(nameToCheck);
+        boolean isFemale = namesFromFilesRepository.isNameInFemaleNamesFile(firstName);
+        boolean isMale = namesFromFilesRepository.isNameInMaleNamesFile(firstName);
+        log.info("Checking by -> {}, name -> {}", FirstNameGenderDetectorService.class.getSimpleName(), firstName);
+        if (isFemale ^ isMale) {
+            if (isFemale) {
                 return Gender.FEMALE;
-            }else{
+            } else {
                 return Gender.MALE;
             }
-        }else{
+        } else {
             return Gender.INCONCLUSIVE;
         }
     }
 
-    private String getFirstName(String fullName){
-        String[] names=fullName.split(" ");
+    private String getFirstName(String fullName) {
+        String[] names = fullName.split(" ");
         return names[0];
     }
 }

@@ -7,7 +7,7 @@ public class NameToCheck {
 
     public NameToCheck(String name, AlgorithmType algorithmType) {
         this.name = name;
-        this.algorithmType=algorithmType;
+        this.algorithmType = algorithmType;
     }
 
     public String getName() {

@@ -12,11 +12,11 @@ public class NamesDisplayerService {
         this.namesFromFilesRepository = namesFromFilesRepository;
     }
 
-    public String getAllMaleNames(){
+    public String getAllMaleNames() {
         return namesFromFilesRepository.getAllMaleNames();
     }
 
-    public String getAllFemaleNames(){
+    public String getAllFemaleNames() {
         return namesFromFilesRepository.getAllFemaleNames();
     }
 }
