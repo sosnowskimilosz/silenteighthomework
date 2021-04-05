@@ -53,4 +53,3 @@ public class NamesFromFilesRepository {
         return false;
     }
 }
-

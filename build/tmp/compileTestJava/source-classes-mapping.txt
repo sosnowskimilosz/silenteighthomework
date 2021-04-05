@@ -1,0 +1,14 @@
+com/silenteight/homework/HomeworkApplicationTests.java
+ com.silenteight.homework.HomeworkApplicationTests
+com/silenteight/homework/controller/AppControllerTest.java
+ com.silenteight.homework.controller.AppControllerTest
+com/silenteight/homework/repository/NamesFromFilesRepository.java
+ com.silenteight.homework.repository.NamesFromFilesRepository
+com/silenteight/homework/service/FirstNameGenderDetectorServiceTest.java
+ com.silenteight.homework.service.FirstNameGenderDetectorServiceTest
+com/silenteight/homework/service/AllNamesFromFilesRepositoryTest.java
+ com.silenteight.homework.service.AllNamesFromFilesRepositoryTest
+com/silenteight/homework/service/NamesDisplayerServiceTest.java
+ com.silenteight.homework.service.NamesDisplayerServiceTest
+com/silenteight/homework/service/VariantSelectorServiceTest.java
+ com.silenteight.homework.service.VariantSelectorServiceTest

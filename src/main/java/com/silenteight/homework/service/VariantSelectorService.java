@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class VariantSelectorService {
 
-    AllNamesGenderDetectorService allNamesGenderDetectorService;
-    FirstNameGenderDetectorService firstNameGenderDetectorService;
+    private final AllNamesGenderDetectorService allNamesGenderDetectorService;
+    private final FirstNameGenderDetectorService firstNameGenderDetectorService;
 
     public VariantSelectorService(AllNamesGenderDetectorService allNamesGenderDetectorService,
                                   FirstNameGenderDetectorService firstNameGenderDetectorService) {
@@ -21,8 +21,7 @@ public class VariantSelectorService {
     public Gender detectGender(NameToCheck nameToCheck) {
         if (AlgorithmType.FIRST_NAME.equals(nameToCheck.getAlgorithmType())) {
             return firstNameGenderDetectorService.getGender(nameToCheck.getName());
-        }
-        else if (AlgorithmType.ALL.equals(nameToCheck.getAlgorithmType())) {
+        } else if (AlgorithmType.ALL.equals(nameToCheck.getAlgorithmType())) {
             return allNamesGenderDetectorService.getGender(nameToCheck.getName());
         } else {
             throw new AlgorithmNotFound("Bad type of algorithm");

@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class AllNamesGenderDetectorService {
 
-    Logger log = LoggerFactory.getLogger(AllNamesGenderDetectorService.class);
-    NamesFromFilesRepository namesFromFilesRepository;
+    private final Logger log = LoggerFactory.getLogger(AllNamesGenderDetectorService.class);
+    private final NamesFromFilesRepository namesFromFilesRepository;
 
     public AllNamesGenderDetectorService(NamesFromFilesRepository namesFromFilesRepository) {
         this.namesFromFilesRepository = namesFromFilesRepository;

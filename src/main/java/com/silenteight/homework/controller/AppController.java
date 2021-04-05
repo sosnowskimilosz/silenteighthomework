@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppController {
 
-    VariantSelectorService variantSelectorService;
-    NamesDisplayerService namesDisplayerService;
+    private final VariantSelectorService variantSelectorService;
+    private final NamesDisplayerService namesDisplayerService;
 
     public AppController(VariantSelectorService variantSelectorService,
                          NamesDisplayerService namesDisplayerService) {

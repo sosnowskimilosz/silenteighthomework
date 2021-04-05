@@ -2,8 +2,8 @@ package com.silenteight.homework.model;
 
 public class NameToCheck {
 
-    String name;
-    AlgorithmType algorithmType;
+    private final String name;
+    private final AlgorithmType algorithmType;
 
     public NameToCheck(String name, AlgorithmType algorithmType) {
         this.name = name;
@@ -18,11 +18,4 @@ public class NameToCheck {
         return algorithmType;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAlgorithmType(AlgorithmType algorithmType) {
-        this.algorithmType = algorithmType;
-    }
 }

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class NamesDisplayerService {
 
-    NamesFromFilesRepository namesFromFilesRepository;
+    private final NamesFromFilesRepository namesFromFilesRepository;
 
     public NamesDisplayerService(NamesFromFilesRepository namesFromFilesRepository) {
         this.namesFromFilesRepository = namesFromFilesRepository;
