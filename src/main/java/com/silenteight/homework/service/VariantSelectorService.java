@@ -22,7 +22,7 @@ public class VariantSelectorService {
         if (AlgorithmType.FIRST_NAME.equals(nameToCheck.getAlgorithmType())) {
             return firstNameGenderDetectorService.getGender(nameToCheck.getName());
         }
-        if (AlgorithmType.ALL.equals(nameToCheck.getAlgorithmType())) {
+        else if (AlgorithmType.ALL.equals(nameToCheck.getAlgorithmType())) {
             return allNamesGenderDetectorService.getGender(nameToCheck.getName());
         } else {
             throw new AlgorithmNotFound("Bad type of algorithm");
