@@ -15,19 +15,19 @@ public class FirstNameGenderDetectorServiceTest {
 
     @Test
     public void shouldReturnMaleByFirstNameGenderDetector() {
-        String maleName="ADAM MARIA ANNA";
+        String maleName = "ADAM MARIA ANNA";
         Assertions.assertEquals(Gender.MALE, firstNameGenderDetectorService.getGender(maleName));
     }
 
     @Test
     public void shouldReturnFemaleByFirstNameGenderDetector() {
-        String femaleName="MARIA ANNA JAN";
+        String femaleName = "MARIA ANNA JAN";
         Assertions.assertEquals(Gender.FEMALE, firstNameGenderDetectorService.getGender(femaleName));
     }
 
     @Test
     public void shouldReturnInconclusiveByFirstNameGenderDetector() {
-        String notName="notName";
+        String notName = "notName";
         Assertions.assertEquals(Gender.INCONCLUSIVE, firstNameGenderDetectorService.getGender(notName));
     }
 }

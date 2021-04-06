@@ -15,38 +15,36 @@ public class NamesFromFilesRepositoryTest {
     NamesFromFilesRepository namesFromFilesRepository;
 
     @Test
-    public void fileWithFemaleNamesShouldExist(){
-        File femaleNamesFile=new File("female_names.txt");
+    public void fileWithFemaleNamesShouldExist() {
+        File femaleNamesFile = new File("female_names.txt");
         Assertions.assertTrue(femaleNamesFile.exists());
     }
 
     @Test
-    public void fileWithMaleNamesShouldExist(){
-        File maleNamesFile=new File("male_names.txt");
+    public void fileWithMaleNamesShouldExist() {
+        File maleNamesFile = new File("male_names.txt");
         Assertions.assertTrue(maleNamesFile.exists());
     }
 
     @Test
-    public void gettingAllMaleNamesFromFileShouldNotBeNull(){
+    public void gettingAllMaleNamesFromFileShouldNotBeNull() {
         Assertions.assertNotNull(namesFromFilesRepository.getAllMaleNames());
     }
 
     @Test
-    public void gettingAllFemaleNamesFromFileShouldNotBeNull(){
+    public void gettingAllFemaleNamesFromFileShouldNotBeNull() {
         Assertions.assertNotNull(namesFromFilesRepository.getAllMaleNames());
     }
 
     @Test
-    public void nameShouldBeFoundInMaleNamesFile(){
-        String maleName="MARIAN";
+    public void nameShouldBeFoundInMaleNamesFile() {
+        String maleName = "MARIAN";
         Assertions.assertTrue(namesFromFilesRepository.isNameInMaleNamesFile(maleName));
     }
 
     @Test
-    public void nameShouldBeFoundInFemaleNamesFile(){
-        String femaleName="ANIA";
+    public void nameShouldBeFoundInFemaleNamesFile() {
+        String femaleName = "ANIA";
         Assertions.assertTrue(namesFromFilesRepository.isNameInMaleNamesFile(femaleName));
     }
-
-
 }
