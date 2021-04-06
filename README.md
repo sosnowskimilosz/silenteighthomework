@@ -24,6 +24,6 @@ Endpoint for detect gender:
 ```sh
  {
  "name":"Jan Maria Rokita",
-"algorithmType":"FIRST_NAME"
+"algorithmType":"ALL"
 }
 ```
