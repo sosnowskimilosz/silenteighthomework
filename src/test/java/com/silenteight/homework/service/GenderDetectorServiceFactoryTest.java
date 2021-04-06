@@ -16,6 +16,12 @@ public class GenderDetectorServiceFactoryTest {
     GenderDetectorServiceFactory genderDetectorServiceFactory;
 
     @Test
+    public void shouldThrowNullPointerException() {
+        NameToCheck nullName = new NameToCheck(null, AlgorithmType.FIRST_NAME);
+        Assertions.assertThrows(NullPointerException.class, () -> genderDetectorServiceFactory.detectGender(nullName));
+    }
+
+    @Test
     public void shouldReturnMaleGenderByFirstNameVariant() {
         NameToCheck maleFirstNameVariant = new NameToCheck("ALBERT MARIA JANINA", AlgorithmType.FIRST_NAME);
         Gender actualGender = genderDetectorServiceFactory.detectGender(maleFirstNameVariant);

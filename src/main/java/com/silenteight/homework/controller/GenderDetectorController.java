@@ -14,7 +14,8 @@ public class GenderDetectorController {
     private final GenderDetectorServiceFactory genderDetectorServiceFactory;
     private final NamesDisplayerService namesDisplayerService;
 
-    public GenderDetectorController(GenderDetectorServiceFactory genderDetectorServiceFactory, NamesDisplayerService namesDisplayerService) {
+    public GenderDetectorController(GenderDetectorServiceFactory genderDetectorServiceFactory,
+                                    NamesDisplayerService namesDisplayerService) {
         this.genderDetectorServiceFactory = genderDetectorServiceFactory;
         this.namesDisplayerService = namesDisplayerService;
     }
