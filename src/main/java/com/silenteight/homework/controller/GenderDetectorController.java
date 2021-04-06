@@ -1,16 +1,16 @@
 package com.silenteight.homework.controller;
 
 
+import com.silenteight.homework.exception.GenderNotFoundException;
 import com.silenteight.homework.model.Gender;
 import com.silenteight.homework.model.NameToCheck;
 import com.silenteight.homework.service.GenderDetectorServiceFactory;
 import com.silenteight.homework.service.NamesDisplayerService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException;
 
 @RestController
+@RequestMapping(value = "/gender")
 public class GenderDetectorController {
 
     private final GenderDetectorServiceFactory genderDetectorServiceFactory;
@@ -21,18 +21,19 @@ public class GenderDetectorController {
         this.namesDisplayerService = namesDisplayerService;
     }
 
-    @PostMapping("/gender/detector")
+    @PostMapping("/detector")
     public Gender sendNameToCheck(@RequestBody NameToCheck nameToCheck) {
         return genderDetectorServiceFactory.detectGender(nameToCheck);
     }
 
-    @GetMapping("allnames/male")
-    public String showAllMaleNames() {
-        return namesDisplayerService.getAllMaleNames();
-    }
-
-    @GetMapping("allnames/female")
-    public String showAllFemaleNames() {
-        return namesDisplayerService.getAllFemaleNames();
+    @GetMapping("/allnames")
+    public String showAllMaleNames(@RequestParam String genderType) {
+        if ("female".equals(genderType)) {
+            return namesDisplayerService.getAllFemaleNames();
+        } else if ("male".equals(genderType)) {
+            return namesDisplayerService.getAllMaleNames();
+        } else {
+            throw new GenderNotFoundException("Bad type of gender");
+        }
     }
 }
