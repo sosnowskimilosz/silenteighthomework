@@ -11,7 +11,7 @@
 
   *  /gender/detector - POST method for evaluating gender of given name required JSON with name and variant of detection
   
-#### Detection based on first name:
+##### Detection based on first name:
 
 ```sh
  {
@@ -19,7 +19,7 @@
 "algorithmType":"FIRST_NAME"
 }
 ```
-#### Detection based on all names:
+##### Detection based on all names:
 
 ```sh
  {
