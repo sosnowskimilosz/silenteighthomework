@@ -1,14 +1,14 @@
 com/silenteight/homework/HomeworkApplicationTests.java
  com.silenteight.homework.HomeworkApplicationTests
-com/silenteight/homework/service/GenderDetectorServiceFactoryTest.java
- com.silenteight.homework.service.GenderDetectorServiceFactoryTest
+com/silenteight/homework/controller/GenderDetectorControllerTest.java
+ com.silenteight.homework.controller.GenderDetectorControllerTest
+com/silenteight/homework/service/AllNamesGenderDetectorServiceTest.java
+ com.silenteight.homework.service.AllNamesGenderDetectorServiceTest
 com/silenteight/homework/service/FirstNameGenderDetectorServiceTest.java
  com.silenteight.homework.service.FirstNameGenderDetectorServiceTest
 com/silenteight/homework/repository/NamesFromFilesRepositoryTest.java
  com.silenteight.homework.repository.NamesFromFilesRepositoryTest
-com/silenteight/homework/controller/GenderDetectorControllerTest.java
- com.silenteight.homework.controller.GenderDetectorControllerTest
 com/silenteight/homework/service/NamesDisplayerServiceTest.java
  com.silenteight.homework.service.NamesDisplayerServiceTest
-com/silenteight/homework/service/AllNamesGenderDetectorServiceTest.java
- com.silenteight.homework.service.AllNamesGenderDetectorServiceTest
+com/silenteight/homework/service/GenderDetectorServiceFactoryTest.java
+ com.silenteight.homework.service.GenderDetectorServiceFactoryTest

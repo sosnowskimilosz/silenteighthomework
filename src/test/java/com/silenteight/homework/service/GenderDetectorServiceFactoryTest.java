@@ -37,6 +37,13 @@ public class GenderDetectorServiceFactoryTest {
     }
 
     @Test
+    public void shouldReturnMaleGenderByFirstNameVariantWithLowerCase() {
+        NameToCheck maleFirstNameVariantWithLowerCase = new NameToCheck("marian jan anna", AlgorithmType.ALL);
+        Gender actualGender = genderDetectorServiceFactory.detectGender(maleFirstNameVariantWithLowerCase);
+        Assertions.assertEquals(Gender.MALE, actualGender);
+    }
+
+    @Test
     public void shouldReturnMaleGenderByAllNameVariant() {
         NameToCheck maleAllNamesVariant = new NameToCheck("ALBERT MARIA WOJCIECH", AlgorithmType.ALL);
         Gender actualGender = genderDetectorServiceFactory.detectGender(maleAllNamesVariant);
@@ -55,5 +62,12 @@ public class GenderDetectorServiceFactoryTest {
         NameToCheck inconclusiveAllNamesVariant = new NameToCheck("notName JAN ANNA", AlgorithmType.ALL);
         Gender actualGender = genderDetectorServiceFactory.detectGender(inconclusiveAllNamesVariant);
         Assertions.assertEquals(Gender.INCONCLUSIVE, actualGender);
+    }
+
+    @Test
+    public void shouldReturnMaleGenderByAllNameVariantWithLowerCase() {
+        NameToCheck maleAllNamesVariant = new NameToCheck("marian jan anna", AlgorithmType.ALL);
+        Gender actualGender = genderDetectorServiceFactory.detectGender(maleAllNamesVariant);
+        Assertions.assertEquals(Gender.MALE, actualGender);
     }
 }

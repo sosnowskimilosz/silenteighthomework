@@ -43,7 +43,7 @@ public class NamesFromFilesRepository {
     private boolean isNameInFile(File file, String name) {
         try (Scanner scanner = new Scanner(file, "UTF-8")) {
             while (scanner.hasNext()) {
-                if (name.equals(scanner.nextLine().toUpperCase().trim())) {
+                if (name.equalsIgnoreCase(scanner.nextLine())) {
                     return true;
                 }
             }

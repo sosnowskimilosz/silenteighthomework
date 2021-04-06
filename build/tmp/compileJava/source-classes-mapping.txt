@@ -1,24 +1,22 @@
 com/silenteight/homework/model/Gender.java
  com.silenteight.homework.model.Gender
-com/silenteight/homework/repository/NamesFromFilesRepository.java
- com.silenteight.homework.repository.NamesFromFilesRepository
+com/silenteight/homework/service/GenderDetectorService.java
+ com.silenteight.homework.service.GenderDetectorService
 com/silenteight/homework/model/AlgorithmType.java
  com.silenteight.homework.model.AlgorithmType
 com/silenteight/homework/HomeworkApplication.java
  com.silenteight.homework.HomeworkApplication
 com/silenteight/homework/model/NameToCheck.java
  com.silenteight.homework.model.NameToCheck
-com/silenteight/homework/service/NamesDisplayerService.java
- com.silenteight.homework.service.NamesDisplayerService
 com/silenteight/homework/controller/GenderDetectorController.java
  com.silenteight.homework.controller.GenderDetectorController
-com/silenteight/homework/service/VariantSelectorService.java
- com.silenteight.homework.service.VariantSelectorService
+com/silenteight/homework/service/NamesDisplayerService.java
+ com.silenteight.homework.service.NamesDisplayerService
+com/silenteight/homework/repository/NamesFromFilesRepository.java
+ com.silenteight.homework.repository.NamesFromFilesRepository
 com/silenteight/homework/service/AllNamesGenderDetectorService.java
  com.silenteight.homework.service.AllNamesGenderDetectorService
 com/silenteight/homework/service/GenderDetectorServiceFactory.java
  com.silenteight.homework.service.GenderDetectorServiceFactory
-com/silenteight/homework/service/GenderDetectorService.java
- com.silenteight.homework.service.GenderDetectorService
 com/silenteight/homework/service/FirstNameGenderDetectorService.java
  com.silenteight.homework.service.FirstNameGenderDetectorService
