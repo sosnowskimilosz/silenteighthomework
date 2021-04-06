@@ -1,6 +1,6 @@
-## Gender Detector 
+### Gender Detector 
 
-Application allows to detect gender due to sent name and displays female or male names.
+#Application allows to detect gender due to sent name and displays female or male names.
 
 - Endpoints for displaying all names:
 
@@ -11,7 +11,7 @@ Application allows to detect gender due to sent name and displays female or male
 
   *  /gender/detector - POST method for evaluating gender of given name required JSON with name and variant of detection
   
-* Detection based on first name:
+# Detection based on first name:
 
 ```sh
  {
@@ -19,7 +19,7 @@ Application allows to detect gender due to sent name and displays female or male
 "algorithmType":"FIRST_NAME"
 }
 ```
-* Detection based on all names:
+# Detection based on all names:
 
 ```sh
  {
