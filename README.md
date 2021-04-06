@@ -9,9 +9,9 @@ Endpoints for displaying all names:
   
 Endpoint for detect gender:
 
-* /gender/detector - POST method for evaluating gender of given name required JSON with name and variant of detection
+-  /gender/detector - POST method for evaluating gender of given name required JSON with name and variant of detection
   
-  1. Detection based on first name:
+* Detection based on first name:
 
 ```sh
  {
@@ -19,7 +19,7 @@ Endpoint for detect gender:
 "algorithmType":"FIRST_NAME"
 }
 ```
-  1. Detection based on all names:
+* Detection based on all names:
 
 ```sh
  {
