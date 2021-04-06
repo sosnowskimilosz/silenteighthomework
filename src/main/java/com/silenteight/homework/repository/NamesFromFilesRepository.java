@@ -4,51 +4,49 @@ import org.springframework.stereotype.Repository;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Scanner;
 
 @Repository
 public class NamesFromFilesRepository {
 
-    private final File fileWithMaleNames = new File("male_names.txt");
-    private final File fileWithFemaleNames = new File("female_names.txt");
-
     public String getAllFemaleNames() {
-        return getNamesFromFiles(fileWithFemaleNames);
+        InputStream femaleNamesStream = getClass().getClassLoader().getResourceAsStream("female_names.txt");
+        return getNamesFromStream(femaleNamesStream);
     }
 
     public String getAllMaleNames() {
-        return getNamesFromFiles(fileWithMaleNames);
+        InputStream maleNamesStream = getClass().getClassLoader().getResourceAsStream("male_names.txt");
+        return getNamesFromStream(maleNamesStream);
     }
 
-    private String getNamesFromFiles(File file) {
+    private String getNamesFromStream(InputStream inputStream) {
         StringBuilder allNames = new StringBuilder();
-        try (Scanner scanner = new Scanner(file, "UTF-8")) {
+        try (Scanner scanner = new Scanner(inputStream, "UTF-8")) {
             while (scanner.hasNext()) {
                 allNames.append(scanner.nextLine()).append("\n");
             }
-        } catch (FileNotFoundException fnfe) {
-            fnfe.printStackTrace();
         }
         return allNames.toString().trim();
     }
 
     public boolean isNameInFemaleNamesFile(String name) {
-        return isNameInFile(fileWithFemaleNames, name);
+        InputStream femaleNamesStream = getClass().getClassLoader().getResourceAsStream("female_names.txt");
+        return isNameInStream(femaleNamesStream, name);
     }
 
     public boolean isNameInMaleNamesFile(String name) {
-        return isNameInFile(fileWithMaleNames, name);
+        InputStream maleNamesStream = getClass().getClassLoader().getResourceAsStream("male_names.txt");
+        return isNameInStream(maleNamesStream, name);
     }
 
-    private boolean isNameInFile(File file, String name) {
-        try (Scanner scanner = new Scanner(file, "UTF-8")) {
+    private boolean isNameInStream(InputStream inputStream, String name) {
+        try (Scanner scanner = new Scanner(inputStream, "UTF-8")) {
             while (scanner.hasNext()) {
                 if (name.equalsIgnoreCase(scanner.nextLine())) {
                     return true;
                 }
             }
-        } catch (FileNotFoundException fnfe) {
-            fnfe.printStackTrace();
         }
         return false;
     }

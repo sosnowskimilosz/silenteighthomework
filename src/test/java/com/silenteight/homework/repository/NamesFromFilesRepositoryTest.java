@@ -7,23 +7,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.File;
+import java.io.InputStream;
 
 @SpringBootTest(classes = HomeworkApplication.class)
 public class NamesFromFilesRepositoryTest {
 
     @Autowired
     NamesFromFilesRepository namesFromFilesRepository;
-
+    
     @Test
-    public void fileWithFemaleNamesShouldExist() {
-        File femaleNamesFile = new File("female_names.txt");
-        Assertions.assertTrue(femaleNamesFile.exists());
+    public void fileWithMaleNamesShouldExist() {
+        InputStream maleNamesStream = getClass().getClassLoader().getResourceAsStream("male_names.txt");
+        Assertions.assertNotNull(maleNamesStream);
     }
 
     @Test
-    public void fileWithMaleNamesShouldExist() {
-        File maleNamesFile = new File("male_names.txt");
-        Assertions.assertTrue(maleNamesFile.exists());
+    public void fileWithFemaleNamesShouldExist() {
+        InputStream femaleNamesStream = getClass().getClassLoader().getResourceAsStream("male_names.txt");
+        Assertions.assertNotNull(femaleNamesStream);
     }
 
     @Test
@@ -38,13 +39,13 @@ public class NamesFromFilesRepositoryTest {
 
     @Test
     public void nameShouldBeFoundInMaleNamesFile() {
-        String maleName = "MARIAN";
+        String maleName = "ADAM";
         Assertions.assertTrue(namesFromFilesRepository.isNameInMaleNamesFile(maleName));
     }
 
     @Test
     public void nameShouldBeFoundInFemaleNamesFile() {
-        String femaleName = "ANIA";
+        String femaleName = "ANNA";
         Assertions.assertTrue(namesFromFilesRepository.isNameInFemaleNamesFile(femaleName));
     }
 }
