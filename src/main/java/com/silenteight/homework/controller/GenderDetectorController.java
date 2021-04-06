@@ -1,13 +1,11 @@
 package com.silenteight.homework.controller;
 
-
 import com.silenteight.homework.exception.GenderNotFoundException;
 import com.silenteight.homework.model.Gender;
 import com.silenteight.homework.model.NameToCheck;
 import com.silenteight.homework.service.GenderDetectorServiceFactory;
 import com.silenteight.homework.service.NamesDisplayerService;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.HttpClientErrorException;
 
 @RestController
 @RequestMapping(value = "/gender")

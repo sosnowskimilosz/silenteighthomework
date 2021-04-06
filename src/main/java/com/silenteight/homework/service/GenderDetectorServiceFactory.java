@@ -12,17 +12,17 @@ public class GenderDetectorServiceFactory {
     private final FirstNameGenderDetectorService firstNameGenderDetectorService;
 
     public GenderDetectorServiceFactory(AllNamesGenderDetectorService allNamesGenderDetectorService,
-                                  FirstNameGenderDetectorService firstNameGenderDetectorService) {
+                                        FirstNameGenderDetectorService firstNameGenderDetectorService) {
         this.allNamesGenderDetectorService = allNamesGenderDetectorService;
         this.firstNameGenderDetectorService = firstNameGenderDetectorService;
     }
 
     public Gender detectGender(NameToCheck nameToCheck) {
-        if(AlgorithmType.FIRST_NAME.equals(nameToCheck.getAlgorithmType())) {
+        if (AlgorithmType.FIRST_NAME.equals(nameToCheck.getAlgorithmType())) {
             return firstNameGenderDetectorService.getGender(nameToCheck.getName());
-        }else if(AlgorithmType.ALL.equals(nameToCheck.getAlgorithmType())){
+        } else if (AlgorithmType.ALL.equals(nameToCheck.getAlgorithmType())) {
             return allNamesGenderDetectorService.getGender(nameToCheck.getName());
-        }else{
+        } else {
             throw new NullPointerException("Algorith type can not be null");
         }
     }
