@@ -5,20 +5,24 @@ import com.silenteight.homework.HomeworkApplication;
 import com.silenteight.homework.model.Gender;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(classes = HomeworkApplication.class)
 public class AllNamesGenderDetectorServiceTest {
 
+    Logger logger = LoggerFactory.getLogger(AllNamesGenderDetectorServiceTest.class);
+
     @Autowired
     AllNamesGenderDetectorService allNamesGenderDetectorService;
+
 
     @Test
     public void shouldReturnFemaleByAllNamesGenderDetector() {
         String femaleName = "ADAM MARIA ANNA";
-        Gender gender = allNamesGenderDetectorService.getGender(femaleName);
-        Assertions.assertEquals(Gender.FEMALE, gender);
+        Assertions.assertEquals(Gender.FEMALE, allNamesGenderDetectorService.getGender(femaleName));
     }
 
     @Test
@@ -29,7 +33,7 @@ public class AllNamesGenderDetectorServiceTest {
 
     @Test
     public void shouldReturnInconclusive() {
-        String maleName = "notName";
-        Assertions.assertEquals(Gender.INCONCLUSIVE, allNamesGenderDetectorService.getGender(maleName));
+        String notExistingName = "notName";
+        Assertions.assertEquals(Gender.INCONCLUSIVE, allNamesGenderDetectorService.getGender(notExistingName));
     }
 }

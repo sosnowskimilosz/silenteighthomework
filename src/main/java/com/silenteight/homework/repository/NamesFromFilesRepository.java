@@ -22,7 +22,7 @@ public class NamesFromFilesRepository {
 
     private String getNamesFromFiles(File file) {
         StringBuilder allNames = new StringBuilder();
-        try (Scanner scanner = new Scanner(file)) {
+        try (Scanner scanner = new Scanner(file, "UTF-8")) {
             while (scanner.hasNext()) {
                 allNames.append(scanner.nextLine()).append("\n");
             }
@@ -41,7 +41,7 @@ public class NamesFromFilesRepository {
     }
 
     private boolean isNameInFile(File file, String name) {
-        try (Scanner scanner = new Scanner(file)) {
+        try (Scanner scanner = new Scanner(file, "UTF-8")) {
             while (scanner.hasNext()) {
                 if (name.equals(scanner.nextLine().toUpperCase().trim())) {
                     return true;

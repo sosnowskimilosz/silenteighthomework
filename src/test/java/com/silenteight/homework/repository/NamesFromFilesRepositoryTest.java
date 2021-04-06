@@ -45,6 +45,6 @@ public class NamesFromFilesRepositoryTest {
     @Test
     public void nameShouldBeFoundInFemaleNamesFile() {
         String femaleName = "ANIA";
-        Assertions.assertTrue(namesFromFilesRepository.isNameInMaleNamesFile(femaleName));
+        Assertions.assertTrue(namesFromFilesRepository.isNameInFemaleNamesFile(femaleName));
     }
 }

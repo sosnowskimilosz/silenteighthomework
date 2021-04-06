@@ -20,7 +20,7 @@ public class NamesDisplayerServiceTest {
 
     @Test
     public void shouldReturnTrueAccToPositionOfFemaleName() {
-        String[] femaleNames = namesDisplayerService.getAllMaleNames().split(" ");
+        String[] femaleNames = namesDisplayerService.getAllFemaleNames().split(" ");
         Assertions.assertTrue(femaleNames[0] == "ANNA");
     }
 }
