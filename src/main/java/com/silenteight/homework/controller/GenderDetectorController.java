@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AppController {
+public class GenderDetectorController {
 
     private final VariantSelectorService variantSelectorService;
     private final NamesDisplayerService namesDisplayerService;
 
-    public AppController(VariantSelectorService variantSelectorService,
-                         NamesDisplayerService namesDisplayerService) {
+    public GenderDetectorController(VariantSelectorService variantSelectorService,
+                                    NamesDisplayerService namesDisplayerService) {
         this.variantSelectorService = variantSelectorService;
         this.namesDisplayerService = namesDisplayerService;
     }
 
-    @PostMapping("/checker")
+    @PostMapping("/gender/detector")
     public Gender sendNameToCheck(@RequestBody NameToCheck nameToCheck) {
         return variantSelectorService.detectGender(nameToCheck);
     }
