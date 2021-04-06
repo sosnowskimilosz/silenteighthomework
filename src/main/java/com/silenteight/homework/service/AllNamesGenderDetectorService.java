@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AllNamesGenderDetectorService {
+public class AllNamesGenderDetectorService implements GenderDetectorServiceInterface {
 
     private final Logger log = LoggerFactory.getLogger(AllNamesGenderDetectorService.class);
     private final NamesFromFilesRepository namesFromFilesRepository;
@@ -30,7 +30,7 @@ public class AllNamesGenderDetectorService {
         }
     }
 
-    public int evaluateGender(String[] names) {
+    private int evaluateGender(String[] names) {
         int genderEvaluation = 0;
         for (String name : names) {
             if (namesFromFilesRepository.isNameInFemaleNamesFile(name)) {
