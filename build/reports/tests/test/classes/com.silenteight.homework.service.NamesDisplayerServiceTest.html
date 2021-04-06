@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - NamesFromFilesRepositoryTest</title>
+<title>Test results - NamesDisplayerServiceTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>NamesFromFilesRepositoryTest</h1>
+<h1>NamesDisplayerServiceTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.silenteight.homework.repository.html">com.silenteight.homework.repository</a> &gt; NamesFromFilesRepositoryTest</div>
+<a href="../packages/com.silenteight.homework.service.html">com.silenteight.homework.service</a> &gt; NamesDisplayerServiceTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.411s</div>
+<div class="counter">0.326s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,15 +73,15 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="nameShouldBeFoundInMaleNamesFile()"></a>
-<h3 class="failures">nameShouldBeFoundInMaleNamesFile()</h3>
+<a name="somethin()"></a>
+<h3 class="failures">somethin()</h3>
 <span class="code">
 <pre>org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:162)
-	at com.silenteight.homework.repository.NamesFromFilesRepositoryTest.nameShouldBeFoundInMaleNamesFile(NamesFromFilesRepositoryTest.java:42)
+	at com.silenteight.homework.service.NamesDisplayerServiceTest.somethin(NamesDisplayerServiceTest.java:18)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -187,8 +187,8 @@
 </tr>
 </thead>
 <tr>
-<td class="failures">nameShouldBeFoundInMaleNamesFile()</td>
-<td class="failures">0.411s</td>
+<td class="failures">somethin()</td>
+<td class="failures">0.326s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -196,21 +196,21 @@
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>14:05:27.006 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-14:05:27.018 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-14:05:27.054 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.silenteight.homework.repository.NamesFromFilesRepositoryTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-14:05:27.067 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.silenteight.homework.repository.NamesFromFilesRepositoryTest], using SpringBootContextLoader
-14:05:27.070 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.silenteight.homework.repository.NamesFromFilesRepositoryTest]: class path resource [com/silenteight/homework/repository/NamesFromFilesRepositoryTest-context.xml] does not exist
-14:05:27.071 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.silenteight.homework.repository.NamesFromFilesRepositoryTest]: class path resource [com/silenteight/homework/repository/NamesFromFilesRepositoryTestContext.groovy] does not exist
-14:05:27.071 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.silenteight.homework.repository.NamesFromFilesRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-14:05:27.114 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.silenteight.homework.repository.NamesFromFilesRepositoryTest]
-14:05:27.240 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.silenteight.homework.repository.NamesFromFilesRepositoryTest]: using defaults.
-14:05:27.240 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-14:05:27.252 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
-14:05:27.253 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-14:05:27.254 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@56cda918, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@44b48d37, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7bf44e50, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6bc32c45, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@507dcd4c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@30402f41, org.springframework.test.context.event.EventPublishingTestExecutionListener@699f71d7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1b4cc9a5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@25e5602d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@146e79f7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@66db364, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7b9143ed, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@757ba0ba]
-14:05:27.258 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@45cb2474 testClass = NamesFromFilesRepositoryTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2f16d572 testClass = NamesFromFilesRepositoryTest, locations = '{}', classes = '{class com.silenteight.homework.HomeworkApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@215743a4, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@38eba2f7, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@167c9aa0, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@609968f0, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@36964037, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@5e86e1e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
-14:05:27.311 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+<pre>14:16:29.217 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+14:16:29.231 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+14:16:29.266 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.silenteight.homework.service.NamesDisplayerServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+14:16:29.278 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.silenteight.homework.service.NamesDisplayerServiceTest], using SpringBootContextLoader
+14:16:29.282 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.silenteight.homework.service.NamesDisplayerServiceTest]: class path resource [com/silenteight/homework/service/NamesDisplayerServiceTest-context.xml] does not exist
+14:16:29.282 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.silenteight.homework.service.NamesDisplayerServiceTest]: class path resource [com/silenteight/homework/service/NamesDisplayerServiceTestContext.groovy] does not exist
+14:16:29.282 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.silenteight.homework.service.NamesDisplayerServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:16:29.327 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.silenteight.homework.service.NamesDisplayerServiceTest]
+14:16:29.459 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.silenteight.homework.service.NamesDisplayerServiceTest]: using defaults.
+14:16:29.459 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+14:16:29.474 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+14:16:29.475 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+14:16:29.475 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@c5ffddc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@74a12e98, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4e80346d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@361aa6b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70a316c6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@d8b33a4, org.springframework.test.context.event.EventPublishingTestExecutionListener@42674d24, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4cdb95f1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2426af8a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7064beb9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@892c3fc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1876ab02, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@9bd1d79]
+14:16:29.482 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@35e0899f testClass = NamesDisplayerServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2f515dbe testClass = NamesDisplayerServiceTest, locations = '{}', classes = '{class com.silenteight.homework.HomeworkApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@17dd3e4c, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1251c2f8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3bb6e4bd, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6e78021d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@71726006, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@5e1a7ed6], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+14:16:29.522 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -220,10 +220,10 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.4.4)
 
-2021-04-06 14:05:27.633  INFO 4976 --- [    Test worker] c.s.h.r.NamesFromFilesRepositoryTest     : Starting NamesFromFilesRepositoryTest using Java 11.0.5 on DESKTOP-9MEJI3E with PID 4976 (started by uniqa in C:\GIT\portfolio\silenteighthomework)
-2021-04-06 14:05:27.637  INFO 4976 --- [    Test worker] c.s.h.r.NamesFromFilesRepositoryTest     : No active profile set, falling back to default profiles: default
-2021-04-06 14:05:28.957  INFO 4976 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-06 14:05:29.270  INFO 4976 --- [    Test worker] c.s.h.r.NamesFromFilesRepositoryTest     : Started NamesFromFilesRepositoryTest in 1.952 seconds (JVM running for 3.28)
+2021-04-06 14:16:29.876  INFO 11372 --- [    Test worker] c.s.h.service.NamesDisplayerServiceTest  : Starting NamesDisplayerServiceTest using Java 11.0.5 on DESKTOP-9MEJI3E with PID 11372 (started by uniqa in C:\GIT\portfolio\silenteighthomework)
+2021-04-06 14:16:29.879  INFO 11372 --- [    Test worker] c.s.h.service.NamesDisplayerServiceTest  : No active profile set, falling back to default profiles: default
+2021-04-06 14:16:31.186  INFO 11372 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-06 14:16:31.500  INFO 11372 --- [    Test worker] c.s.h.service.NamesDisplayerServiceTest  : Started NamesDisplayerServiceTest in 1.967 seconds (JVM running for 3.28)
 </pre>
 </span>
 </div>
@@ -235,7 +235,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.8.3</a> at 6 kwi 2021, 14:05:29</p>
+<a href="http://www.gradle.org">Gradle 6.8.3</a> at 6 kwi 2021, 14:16:31</p>
 </div>
 </div>
 </body>
