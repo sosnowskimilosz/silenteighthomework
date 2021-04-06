@@ -9,7 +9,7 @@ Endpoints for displaying all names:
   
 Endpoint for detect gender:
 
-  /gender/detector - POST method for evaluating gender of given name required JSON with name and variant of detection
+- /gender/detector - POST method for evaluating gender of given name required JSON with name and variant of detection
   
 - Detection based on first name:
 
