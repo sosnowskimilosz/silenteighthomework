@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AllNamesGenderDetectorService implements GenderDetectorServiceInterface {
+public class AllNamesGenderDetectorService implements GenderDetectorService {
 
     private final Logger log = LoggerFactory.getLogger(AllNamesGenderDetectorService.class);
     private final NamesFromFilesRepository namesFromFilesRepository;
