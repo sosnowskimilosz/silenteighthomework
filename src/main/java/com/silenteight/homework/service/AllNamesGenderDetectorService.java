@@ -17,8 +17,9 @@ public class AllNamesGenderDetectorService {
     }
 
     public Gender getGender(String allNames) {
-        String[] names = allNames.split(" ");
+        String[] names = allNames.toUpperCase().split(" ");
         int genderEvaluator = evaluateGender(names);
+        log.info("Value of genderEvaluator -> {}", genderEvaluator);
         log.info("Checking by -> {}, names to check -> {}", AllNamesGenderDetectorService.class.getSimpleName(), allNames);
         if (genderEvaluator > 0) {
             return Gender.FEMALE;

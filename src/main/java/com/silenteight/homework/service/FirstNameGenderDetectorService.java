@@ -17,7 +17,7 @@ public class FirstNameGenderDetectorService {
     }
 
     public Gender getGender(String nameToCheck) {
-        String firstName = getFirstName(nameToCheck);
+        String firstName = getFirstName(nameToCheck.toUpperCase());
         boolean isFemale = namesFromFilesRepository.isNameInFemaleNamesFile(firstName);
         boolean isMale = namesFromFilesRepository.isNameInMaleNamesFile(firstName);
         log.info("Checking by -> {}, name -> {}", FirstNameGenderDetectorService.class.getSimpleName(), firstName);

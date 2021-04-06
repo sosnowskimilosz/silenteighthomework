@@ -8,14 +8,14 @@ com/silenteight/homework/repository/NamesFromFilesRepository.java
  com.silenteight.homework.repository.NamesFromFilesRepository
 com/silenteight/homework/HomeworkApplication.java
  com.silenteight.homework.HomeworkApplication
-com/silenteight/homework/service/VariantSelectorService.java
- com.silenteight.homework.service.VariantSelectorService
-com/silenteight/homework/service/NamesDisplayerService.java
- com.silenteight.homework.service.NamesDisplayerService
-com/silenteight/homework/controller/AppController.java
- com.silenteight.homework.controller.AppController
 com/silenteight/homework/model/NameToCheck.java
  com.silenteight.homework.model.NameToCheck
+com/silenteight/homework/service/NamesDisplayerService.java
+ com.silenteight.homework.service.NamesDisplayerService
+com/silenteight/homework/service/VariantSelectorService.java
+ com.silenteight.homework.service.VariantSelectorService
+com/silenteight/homework/controller/AppController.java
+ com.silenteight.homework.controller.AppController
 com/silenteight/homework/service/AllNamesGenderDetectorService.java
  com.silenteight.homework.service.AllNamesGenderDetectorService
 com/silenteight/homework/service/FirstNameGenderDetectorService.java
