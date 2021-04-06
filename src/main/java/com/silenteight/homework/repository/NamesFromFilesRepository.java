@@ -1,9 +1,6 @@
 package com.silenteight.homework.repository;
 
 import org.springframework.stereotype.Repository;
-
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Scanner;
 

@@ -1,6 +1,5 @@
 package com.silenteight.homework.service;
 
-
 import com.silenteight.homework.HomeworkApplication;
 import com.silenteight.homework.model.Gender;
 import org.junit.jupiter.api.Assertions;
@@ -17,7 +16,6 @@ public class AllNamesGenderDetectorServiceTest {
 
     @Autowired
     AllNamesGenderDetectorService allNamesGenderDetectorService;
-
 
     @Test
     public void shouldReturnFemaleByAllNamesGenderDetector() {

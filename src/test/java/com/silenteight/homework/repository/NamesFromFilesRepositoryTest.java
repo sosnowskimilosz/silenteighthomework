@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.io.File;
 import java.io.InputStream;
 
 @SpringBootTest(classes = HomeworkApplication.class)
@@ -14,7 +12,7 @@ public class NamesFromFilesRepositoryTest {
 
     @Autowired
     NamesFromFilesRepository namesFromFilesRepository;
-    
+
     @Test
     public void fileWithMaleNamesShouldExist() {
         InputStream maleNamesStream = getClass().getClassLoader().getResourceAsStream("male_names.txt");
